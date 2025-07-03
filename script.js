@@ -60,3 +60,46 @@ let numbersDoubled = numbers.map(function(num) {
 });
 console.log(numbersDoubled);
 
+
+// Oppgave 1: Lag et array med flere matretter. Ved bruk av forEach, log i console for hver matrett: matrett + "liker å spise".
+
+// Oppgave 2: Lag et array med flere tall verdier. Ved bruk av map, log i console et arrey av dem tallene, men halvert.
+
+
+// Oppgave 1:
+const matretter = ["pizza", "taco", "sushi", "burger"];
+matretter.forEach((matrett) => {
+  console.log(matrett + " liker å spise");
+});
+
+// Oppgave 2
+const tall = [10, 24, 8, 12];
+const halvert = tall.map((verdi) => verdi / 2);
+console.log(halvert); // [5, 12, 4, 6]
+
+// Forklaring: 
+// For oppgave 1 brukes forEach for å logge en setning for hver matrett. 
+// For oppgave 2 bruker vi map som lager et nytt array der hvert tall er delt på 2 og logger dette i console.
+
+
+
+// Avansert oppgave 1: Ha 7 matretter i array med matretter. Lag også arrays med alle 7 ukedager. Bruk forEach til å skrive ut i konsollen: "Jeg liker å spise" {matrett} på {ukedag}.
+
+const matretter = ["pizza", "taco", "omelett", "burger", "kyllingvinger", "biff", "vårrull"];
+const ukedager = ["mandag", "tirsdag", "onsdag", "torsdag", "fredag", "lørdag", "søndag"];
+
+matretter.forEach((matrett, index) => {
+  console.log(`Jeg liker å spise ${matrett} på ${ukedager[index]}.`);
+});
+
+// Forklaring: Her brukes forEach og index fra matrett-arrayet for å matche hver matrett med riktig ukedag i samme rekkefølge.
+
+// Avansert oppgave 2: Lag et array med minst 5 navn (fornavn). Bruk .map()for å lage et nytt array der hvert navn har teksten "Hei," foran seg. Log det nye arrayet i konsollen. Eksempel på autput: ["Hei, MARIA, "Hei, OLA", "Hei, JØRN"] Tips: bruk metoden .to UpperCase
+
+// Løsningen:
+
+const navn = ["Maria", "Ola", "Jørn", "Lise", "Lars"];
+const heiNavn = navn.map(n => `Hei, ${n.toUpperCase()}`);
+console.log(heiNavn); // ["Hei, MARIA", "Hei, OLA", "Hei, JØRN", "Hei, LISE", "Hei, LARS"]
+
+// Forklaring: Bruker .map for å lage et nytt array med "Hei," foran navnene, og .toUpperCase for å gjøre alle navnene store.
